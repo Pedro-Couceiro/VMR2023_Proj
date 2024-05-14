@@ -1,0 +1,12 @@
+{
+    "server":{
+        "port":8081,
+        "host":"http://localhost"
+    },
+    "db": {
+        "host":"localhost",
+        "user":"root",
+        "password":"",
+        "database":"keepyourselfsafe_db"
+    }
+}
