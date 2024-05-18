@@ -10,14 +10,16 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance => _instance;
     
     //Get the child GroundCheckCollider
+    [Header("References")]
     [SerializeField] private Transform _groundCheckCollider;
     [SerializeField] private Transform _respawnPoint;
     
+    [Header("Values")]
     [SerializeField] private float _speed = 5f;
     [SerializeField] private float _jumpForce = 5f;
     [SerializeField] private float _gravity = 1f;
     
-    private bool _isGrounded = false;
+    [SerializeField] private bool _isGrounded = false;
     
     private Rigidbody2D _rigidbody2D;
     void Awake()

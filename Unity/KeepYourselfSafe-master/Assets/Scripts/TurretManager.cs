@@ -11,9 +11,9 @@ public class TurretManager : MonoBehaviour
     [SerializeField] float velocidadeBala = 10f;  // Velocidade da bala
     private float tempoUltimoDisparo;
 
-    [Header("Rotação da Torre")]
-    [SerializeField] Transform torreTransform; // Objeto cuja rotação vai ser alterada
-    [SerializeField] float rotacaoZ; //Valor da rotação do objeto
+    [Header("Rotacao da Torre")]
+    [SerializeField] Transform torreTransform; // Objeto cuja rotacao vai ser alterada
+    [SerializeField] float rotacaoZ; //Valor da rotacao do objeto
 
     void Update()
     {
@@ -22,11 +22,11 @@ public class TurretManager : MonoBehaviour
             // Dispara uma bala
             DispararBala();
 
-            // Atualiza o tempo do último disparo
+            // Atualiza o tempo do ultimo disparo
             tempoUltimoDisparo = Time.time;
         }
 
-        transform.rotation = Quaternion.Euler(0f, 0f, rotacaoZ); //Transforma a rotação do objeto
+        transform.rotation = Quaternion.Euler(0f, 0f, rotacaoZ); //Transforma a rotacao do objeto
     }
 
     private void DispararBala()
@@ -40,7 +40,7 @@ public class TurretManager : MonoBehaviour
         // Aplica uma força para mover a bala para a direita
         rbBala.velocity = transform.right * velocidadeBala;
 
-        // Destroi a bala após alguns segundos para evitar acumulação no jogo
+        // Destroi a bala após alguns segundos para evitar acumulacao no jogo
         Destroy(bala, 5f);
     }
 }
