@@ -605,6 +605,7 @@ GameObject:
   - component: {fileID: 746748521}
   - component: {fileID: 746748520}
   - component: {fileID: 746748526}
+  - component: {fileID: 746748527}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -780,6 +781,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _grabBox: {fileID: 795463474}
+--- !u!114 &746748527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746748519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ced9a2e021edff4e93884c2c10e2eb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webRequest: {fileID: 1540707766}
 --- !u!1 &795463473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1540707765}
+  - component: {fileID: 1540707766}
   m_Layer: 0
   m_Name: WebRequest
   m_TagString: Untagged
@@ -1082,6 +1097,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1540707766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540707764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449a369ebe5aba34b9c542481eb1ff80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerActions: {fileID: 746748527}
+  host: localhost
+  port: 8081
+  timeOutTime: 5000
 --- !u!1 &1812304821
 GameObject:
   m_ObjectHideFlags: 0
